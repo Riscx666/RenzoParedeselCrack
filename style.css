@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #610869; /* Color de fondo agregado */
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header .intro {
+    text-align: center;
+}
+
+.header h3, .header h1 {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #faf6f6;
+    }
+    50% {
+        color: blueviolet;
+    }
+    100% {
+        color: #f8f5f5;
+    }
+}
+
+.animated-text {
+    animation: bounce 1s infinite, colorChange 3s infinite;
+}
+
+/* Marquee */
+.marquee {
+    background-color: #d40606;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navigation a {
+    color: rgb(233, 27, 27);
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #26ca4a;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+/* Contact & Service */
+.contact-service {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact-form, .service-form {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #09a344;
+    border-radius: 5px;
+}
+
+.contact-form form, .service-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label, .service-form label {
+    margin: 10px 0 5px;
+}
+
+.contact-form input, .contact-form textarea, .service-form select {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: rgb(240, 17, 17);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
